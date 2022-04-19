@@ -1,0 +1,13 @@
+<% unless comment.archived? %>
+  <p>
+    <strong><%= comment.commenter %>:</strong>
+    <%= comment.body %> 
+    <i style="color: var(--bs-gray-700);">at <%= time_ago_in_words(comment.created_at) %></i>
+  </p>
+
+  <% link_to "Delete comment", comment.article, data: {
+                              turbo_method: :delete,
+                              turbo_confirm: "Are you sure?"
+                            } %>
+
+<% end %>
