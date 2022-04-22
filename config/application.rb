@@ -22,7 +22,6 @@ module Mangrails
       IPAddr.new("0.0.0.0/0"),        # All IPv4 addresses.
       IPAddr.new("::/0"),             # All IPv6 addresses.
       "localhost",                    # The localhost reserved domain.
-      'be23-2804-388-501f-d3b9-bf1e-bf55-44e6-33f.sa.ngrok.io',
       ENV["RAILS_DEVELOPMENT_HOSTS"]  # Additional comma-separated hosts for development.
     ]
   end

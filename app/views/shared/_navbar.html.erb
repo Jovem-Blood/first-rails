@@ -1,0 +1,19 @@
+<header class="p-3 bg-dark text-white">
+  <div class="d-flex flex-wrap align-items-center justify-content-between ">
+    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+      <li><%= link_to "Home", root_path, class: "nav-link px-2 text-white" %></li>
+      <li><%= link_to "My Articles", my_articles_path, class: "nav-link px-2 text-white" %></li>
+    </ul>
+
+  <% if user_signed_in? %>
+    <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-outline-light me-2" %>
+    <%= link_to "Log out", destroy_user_session_path, class: "btn btn-warning", data: { turbo_method: :delete } %>
+  <% else %>
+    <div class="text-end">
+      <%= link_to "Login", new_user_session_path, class: "btn btn-outline-light me-2" %>
+      <%= link_to "Register", new_user_registration_path, class: "btn btn-warning" %>
+    </div>
+  </div>
+  <% end %>
+</header>
+
