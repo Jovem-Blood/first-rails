@@ -19,8 +19,8 @@
     <%= render 'shared/navbar' %>
 
     <main class="container-fluid">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <%= render 'shared/alerts', alert: notice, style: 'danger' %>
+      <%= render 'shared/alerts', alert: alert, style: 'warning' %>
       <%= yield %>
     </main>
 
