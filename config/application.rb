@@ -22,6 +22,7 @@ module Mangrails
       IPAddr.new("0.0.0.0/0"),        # All IPv4 addresses.
       IPAddr.new("::/0"),             # All IPv6 addresses.
       "localhost",                    # The localhost reserved domain.
+      "http://192.168.43.209",
       ENV["RAILS_DEVELOPMENT_HOSTS"]  # Additional comma-separated hosts for development.
     ]
   end
